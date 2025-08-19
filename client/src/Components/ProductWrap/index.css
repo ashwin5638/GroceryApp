@@ -1,0 +1,138 @@
+.wrap-img{
+    height: 500px;
+    width: 600px;
+    margin-top: 10px;
+    margin-left: 70px;
+    box-shadow:  0 0 10px #cec9c9;
+    border-radius: 10px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    
+}
+.column-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px
+}
+.column-container{
+    margin-left: 130px;
+}
+.wrap-font{
+    font-size: 30px;
+}
+.wrap-price{
+    font-size: 20px;
+    font-weight: bold
+}
+.input-wrap{
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+}
+.wrap-quantity{
+    color: green;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav-wrap{
+    background-color: green;
+}
+
+.button-wrap{
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 170px;
+    background-color: green;
+    color: white;
+    font-size: 18px;
+    border: 0px;
+}
+.wrap-discript{
+    font-size: 18px;
+    color:rgb(143, 144, 145)
+}
+.icon-wrap{
+    height: 25px;
+    width: 30px;
+    margin-top: 7px;
+    margin-right: 20px;
+}
+
+
+@media (max-width: 480px) {
+    .wrap-img{
+    height: 170px;
+    width: 180px;
+    margin-top: 50px;
+    margin-left: 100px;
+    box-shadow:  0 0 10px #cec9c9;
+    border-radius: 10px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    
+}
+.column-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px
+}
+.column-container{
+    margin-left: 10px;
+}
+.wrap-font{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.wrap-price{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.input-wrap{
+    width: 40px;
+    height: 10px;
+    margin-top: 10px;
+}
+.wrap-quantity{
+    color: green;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.nav-wrap{
+    background-color: green;
+}
+
+.button-wrap{
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 160px;
+    background-color: green;
+    color: white;
+    margin-top: 30px;
+    font-size: 20px;
+    border: 0px;
+}
+.wrap-discript{
+    font-size: 18px;
+    color:rgb(143, 144, 145)
+}
+.icon-wrap{
+    height: 25px;
+    width: 30px;
+    margin-top: 7px;
+    margin-right: 20px;
+}
+.button+{
+    margin-top: 30px;
+}
+
+}

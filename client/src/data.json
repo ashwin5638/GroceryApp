@@ -1,0 +1,85 @@
+{
+   "products" : {
+  
+  
+    "Vegetables" : [
+{
+    "name":"Cabbage",
+    "photo_url":"https://www.freepngimg.com/thumb/categories/2970.png",
+    "quantity":"Fresh organic cabbage grown locally. Perfect for salads and cooking.",
+    "id":1,
+    "price": 30
+},
+{
+    "name":"Capsicum",
+    "photo_url":"https://www.nicepng.com/png/detail/52-525615_green-bell-pepper-png-green-capsicum-png.png",
+    "quantity":"One Fresh organic capsicum grown locally. Perfect for cooking.",
+    "id":2,
+    "price": 5
+},
+{
+    "name":"Garlic",
+    "photo_url":"https://www.freepngimg.com/thumb/garlic/2-2-garlic-transparent-thumb.png",
+    "quantity":"Fresh organic garlic grown locally. Perfect for  cooking.",
+    "id":3,
+    "price": 20
+},
+{
+    "name":"Beetroot",
+    "photo_url":"https://pngimg.com/uploads/beet/beet_PNG28.png",
+    "quantity":"Fresh organic Beetroot grown locally. Perfect for salads and cooking.",
+    "id":4,
+    "price": 20
+},
+{
+    "name":"Tomatoes",
+    "photo_url":"https://www.freepngimg.com/thumb/categories/2985.png",
+    "quantity":"One Fresh organic Tomatos grown locally. Perfect for salads and cooking.",
+    "id":5,
+    "price": 5
+},
+{
+    "name":"Celeriac",
+    "photo_url":"https://w7.pngwing.com/pngs/252/146/png-transparent-celeriac-leaf-vegetable-food-celery-herbes-leaf-vegetable-food-plant-stem-thumbnail.png",
+    "quantity":"One Bunch",
+    "id":6,
+    "price": 5
+}
+],
+"fruits": [
+    {    
+        "id":101,
+        "name" : "Apple",
+        "photo_url" : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/265px-Red_Apple.jpg",
+        "price" : 35
+      },
+      {
+        "id": 102,
+        "name" : "Banana",
+        "photo_url" : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Bananas_white_background_DS.jpg/320px-Bananas_white_background_DS.jpg",
+        "price" : 12
+      },
+      {
+        "id":103,
+        "name" : "Grapes",
+        "photo_url" : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Table_grapes_on_white.jpg/320px-Table_grapes_on_white.jpg",
+        "weight": 0.1,
+        "price" : 45
+      },
+      {
+        "id":104,
+        "name" : "Pineapple",
+        "photo_url" : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Pineapple_and_cross_section.jpg/286px-Pineapple_and_cross_section.jpg",
+        "price" : 200
+      }
+	],
+"herbes" : [
+      {
+    "id": "7",
+    "name": "Fresh Basil",
+    "price": 100,
+    "photo_url": "https://images.unsplash.com/photo-1618375569909-3c8616e9ad3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=801"
+  }
+]
+   }
+}

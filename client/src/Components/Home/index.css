@@ -1,0 +1,264 @@
+
+.store-element{
+    height: 550px;
+    display: flex;
+    background-color: green;   
+}
+.head{
+    margin-top: 50px;
+    color: white;
+    margin-left: 170px;
+    font-size: 50px;
+    
+}
+
+.image{
+    height: 390px;
+    width: 490px;
+    margin-left: 70px;
+    margin-top: 50px;
+    border-radius: 9px;
+}
+.head-ele{
+    display: flex;
+    flex-direction: column;
+}
+.para1{
+    font-size: 20px;
+    margin-left: 20px;
+    color: white;
+    margin-left: 170px;
+}
+.img2{
+    height: 200px;
+    width: 250px;
+    margin-left: 30px;
+    border-radius: 10px;
+}
+.store-element1 {
+    height: 210px;
+    width: 300px;
+    margin-left: 40px;
+    border-radius: 10px;
+    display: flex;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+    z-index: 1;
+}
+.store-element1:hover{
+    transform: scale(1.05);
+}
+.veges{
+    font-size: 25px;
+    color: whitesmoke;
+    font-weight: bold;
+    margin-top: 170px;
+    margin-left: 20px;
+}
+.row-container{
+    display: flex;
+    flex-direction: row;
+}
+.continue{
+    background-color: #f4f6f4; 
+    height: 60px;
+    width: 250px;
+    border: 0px;
+    font-size: 25px;
+    margin-left: 220px;
+    margin-top: 20px;
+    color: green;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.arrow-icon{
+    margin-left: 10px;
+    color: green;
+}
+.product-head1{
+    margin-left: 30px;
+    margin-top: 100px;
+}
+.head2{
+    margin-left: 30px;
+}
+.discript{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    height: 380px;
+    background-color: green;
+    margin-top: 80px;
+}
+.head-discript{
+    font-size: 35px;
+    margin-top: 80px;
+}
+.para-discript{
+    font-size: 24px;
+}
+.continue-discript{
+    background-color: #f4f6f4; 
+    height: 45px;
+    width: 180px;
+    border: 0px;
+    font-size: 30px;
+    margin-top: 20px;
+    color: green;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+@media (max-width : 480px) {
+.store-element{
+    height: 550px;
+    display: flex;
+    width: 480px;
+    background-color: green;   
+}
+.store-image{
+    display: flex;
+    flex-direction: column;
+}
+.head{
+    margin-top: 19px;
+    color: white;
+    margin-left: 17px;
+    font-size: 20px;
+    
+}
+.image{
+    height: 90px;
+    width: 90px;
+    margin-top: 10px;
+    border-radius: 9px;
+}
+.head-ele{
+    display: flex;
+    flex-direction: column;
+}
+.para1{
+    font-size: 20px;
+    margin-left: 20px;
+    color: white;
+    margin-left: 170px;
+}
+}
+/* Tablet view */
+@media (max-width: 1024px) {
+  .store-element {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+  }
+
+  .head {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .image {
+    margin-left: 0;
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .row-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .store-element1 {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .continue {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+/* Phone view */
+@media (max-width: 480px) {
+  .store-element {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 15px;
+    width: 100%;
+  }
+
+  .head {
+    margin-top: 15px;
+    margin-left: 0;
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .image {
+    width: 90%;
+    height: auto;
+    margin: 15px 0 0 0;
+  }
+
+  .para1 {
+    font-size: 16px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .row-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .store-element1 {
+    width: 310px;
+    height: 190px;
+    margin: 10px 0;
+  }
+
+  .veges {
+    font-size: 20px;
+    margin: 10px;
+  }
+
+   .veges1 {
+    font-size: 20px;
+    margin: 10px;
+    font-weight: 700;
+    color: rgb(155, 198, 15);
+  }
+
+  .continue {
+    width: 80%;
+    margin-left: 0;
+    font-size: 16px;
+  }
+
+  .discript {
+    padding: 20px;
+    height: auto;
+  }
+
+  .head-discript {
+    font-size: 22px;
+    margin-top: 20px;
+  }
+
+  .para-discript {
+    font-size: 16px;
+  }
+
+  .continue-discript {
+    width: 80%;
+    font-size: 14px;
+  }
+}
