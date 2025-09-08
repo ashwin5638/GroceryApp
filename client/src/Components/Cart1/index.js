@@ -23,7 +23,7 @@ useEffect(() => {
     
     if (userId && (!cart || cart.length === 0)) {
       try {
-        const response = await fetch(`http://localhost:3000/cart/${userId}`);
+        const response = await fetch(`https://groceryapp-backend-3mgw.onrender.com/cart/${userId}`);
         const data = await response.json();
         
         console.log("Loaded cart data:", data);
@@ -67,7 +67,7 @@ useEffect(() => {
     const userId = getUserId();
     
     try {
-      const response = await fetch("http://localhost:3000/cart", {
+      const response = await fetch("https://groceryapp-backend-3mgw.onrender.com/cart", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ 
@@ -132,7 +132,7 @@ useEffect(() => {
     const userId = getUserId();
     if (userId) {
       try {
-        const response = await fetch(`http://localhost:3000/cart/${userId}`, {
+        const response = await fetch(`https://groceryapp-backend-3mgw.onrender.com/cart/${userId}`, {
           method: "DELETE"
         });
         
