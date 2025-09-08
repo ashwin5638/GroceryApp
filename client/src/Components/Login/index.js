@@ -42,7 +42,7 @@ const Login = () => {
 
     try {
       // Fixed: Changed URL from /Users/login to /login to match backend
-      const response = await fetch("http://localhost:3000/login", {
+      const response = await fetch("https://groceryapp-backend-3mgw.onrender.com/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
