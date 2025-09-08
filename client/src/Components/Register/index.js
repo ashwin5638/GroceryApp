@@ -10,6 +10,7 @@ const Register = () => {
   });
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,6 +23,7 @@ const Register = () => {
   const validateForm = () => {
     const newErrors = {};
     
+
     if (!RegisterData.firstName.trim()) {
       newErrors.firstName = 'First name is required';
     }
@@ -37,6 +39,12 @@ const Register = () => {
     } else if (RegisterData.password.length < 6) {
       newErrors.password = 'Password must be at least 6 characters';
     }
+
+
+    
+    if (!RegisterData.phone.trim()) {
+      newErrors.phone = 'Phone number is required';
+    }
     
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -48,29 +56,50 @@ const Register = () => {
     if (!validateForm()) return;
     
     setLoading(true);
+    setErrors({});
+    setSuccessMessage('');
     
-    
-      const response = await fetch('http://localhost:3000/Users/register', {
+    try {
+  
+      const response = await fetch('http://localhost:3000/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          name: RegisterData.firstName,
-          emailAddress: RegisterData.email,
-          phoneNumber: RegisterData.phone,
-          Password: RegisterData.password
-        })
+       body: JSON.stringify({
+       name: RegisterData.firstName,
+       email: RegisterData.email,  
+       phone: RegisterData.phone,
+       password: RegisterData.password
+   })
+
       });
 
       const data = await response.json();
+      console.log('Server response:', data);
       
-      if (response.ok) {
-        console.log('Registration successful:', data);
+      if (response.ok && data.success) {
+        setSuccessMessage('Account created successfully! You can now login.');
+        
+        setRegisterData({
+          firstName: '',
+          email: '',
+          password: '',
+          phone: ''
+        });
+       
+        setTimeout(() => {
+          window.location.href = '/login';
+        }, 2000);
       } else {
-        setErrors({ general: data.message || 'Registration failed' });
+        setErrors({ general: data.error || 'Registration failed' });
       }
-    
+    } catch (error) {
+      console.error('Registration error:', error);
+      setErrors({ general: 'Network error. Please try again.' });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -82,6 +111,10 @@ const Register = () => {
         <form onSubmit={handleSubmit} className="register-form">
           {errors.general && (
             <div className="error-message">{errors.general}</div>
+          )}
+          
+          {successMessage && (
+            <div className="success-message">{successMessage}</div>
           )}
           
           <div className="form-row">
@@ -129,7 +162,7 @@ const Register = () => {
           </div>
            
           <div className="form-group">
-            <label htmlFor="phone">Phone Number (Optional)</label>
+            <label htmlFor="phone">Phone Number</label>
             <input
               type="tel"
               id="phone"
@@ -137,7 +170,9 @@ const Register = () => {
               value={RegisterData.phone}
               onChange={handleChange}
               placeholder="Enter your phone number"
+              className={errors.phone ? 'error' : ''}
             />
+            {errors.phone && <span className="error-text">{errors.phone}</span>}
           </div>
              
           <div className="form-options">

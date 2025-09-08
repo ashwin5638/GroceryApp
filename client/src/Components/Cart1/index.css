@@ -21,12 +21,27 @@
   flex: 1;
   padding: 0 24px;
   height: 300px;
+  
 }
 
 .cart-head{
   color: green;
+  margin-right: 70px;
 }
 
+
+.clear-cart-btn{
+  background-color:  green;
+  color: white;
+  height: 30px;
+  width: 100px;
+  border: 0px;
+  border-radius: 5px;
+  font-size: 15px;
+  margin-left: 50px;
+  font-weight: 600;
+  cursor: pointer;
+}
 
 .buttn{
   height: 20px;
@@ -255,7 +270,7 @@
   padding: 36px 30px 32px;
   position: sticky;
   top: 24px;
-  margin-left: 300px;
+  margin-left: 150px;
   height: fit-content;
   min-width: 275px;
   transition: box-shadow .22s;
