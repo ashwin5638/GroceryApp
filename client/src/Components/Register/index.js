@@ -61,7 +61,7 @@ const Register = () => {
     
     try {
   
-      const response = await fetch('https://groceryapp-backend-3mgw.onrender.com/register', {
+      const response = await fetch('https://groceryapp-backend-3mgw.onrender.com/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
