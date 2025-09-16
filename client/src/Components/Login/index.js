@@ -33,6 +33,8 @@ const Login = () => {
     return Object.keys(newErrors).length === 0;
   };
 
+  const API_URL = process.env.REACT_APP_API_URL;
+
   const loginForm = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
@@ -41,8 +43,8 @@ const Login = () => {
     setErrorMessage("");
 
     try {
-      // Fixed: Changed URL from /Users/login to /login to match backend
-      const response = await fetch("http://localhost:3000/login", {
+      
+      const response = await fetch(`${API_URL}/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
