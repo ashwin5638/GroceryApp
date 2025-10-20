@@ -44,7 +44,7 @@ class Home extends Component{
            </div>
            </Link>
 
-           <Link to="/fruit">
+           <Link to="/fruit" className="link-fruits">
          <div className="store-element1" style={{
              backgroundImage: `url(${img2})`,
               backgroundSize: 'cover',
