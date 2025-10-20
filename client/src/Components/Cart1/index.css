@@ -324,7 +324,6 @@
   width: 100%;
   border: none;
   margin: 13px 0 4px 0;
-  
   border-radius: 9px;
   font-size: 1.12rem;
   font-weight: 700;
@@ -371,41 +370,80 @@
   font-style: italic;
 }
 
-/* Responsive Design */
-@media (max-width: 980px) {
+/* Mobile screen adjustments */
+@media (max-width: 480px) {
+  /* Reduce cart container padding & margin */
   .cart-container {
     flex-direction: column;
-    padding: 14px 4vw;
-  }
-
-  .order-cart {
-    width: 100%;
+    padding: 12px 6px;
+    gap: 16px;
     margin: 0 auto;
-    margin-top: 24px;
-    min-width: 0;
-    padding: 24px 5vw 20px;
   }
 
-  .cart-list-container {
-    padding: 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .cart-img {
-    width: 85px;
-    height: 85px;
-    min-width: 60px;
-  }
+  /* Cart items stacked and smaller spacing */
   .cart-item {
     flex-direction: column;
     align-items: flex-start;
-    gap: 15px;
-    padding: 17px 10px;
+    gap: 12px;
+    margin-left: 100px;
+    padding: 14px 10px;
   }
-  .order-head,
-  .cart-head {
-    font-size: 1.11rem;
+
+  /* Cart images smaller */
+  .cart-img {
+    width: 250px;
+    height: 210px;
   }
-  .order-cart { padding: 20px 3vw 14px;}
+
+  /* Cart item name alignment */
+  .cart-img-name {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  .name {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  /* Cart actions stacked vertically */
+  .cart-item-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  /* Quantity buttons smaller */
+  .quantity-controls {
+    gap: 8px;
+  }
+  .quantity-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+
+  /* Order summary adjustments */
+  .order-cart {
+    width: 100%;
+    margin: 12px auto 0;
+    min-width: 0;
+    padding: 18px 5vw;
+    top: auto;
+    position: relative;
+  }
+  .total-order {
+    font-size: 1.1rem;
+  }
+  .procced-buttn, .continue-buttn {
+    height: 42px;
+    font-size: 0.95rem;
+  }
+
+  /* Empty cart message */
+  .cart-empty {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 60px;
+  }
 }

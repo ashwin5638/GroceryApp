@@ -59,11 +59,11 @@ const ProductWrap = ({ cart, setCart }) => {
         </div>
         <span className="wrap-price">₹{product.price}/kg</span>
        
-        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
           <span className="wrap-quantity">Quantity:</span>
-          <button className="button+" onClick={() => setQuantity(Math.max(1, quantity - 1))}>-</button>
+          <button className="buttonplus" onClick={() => setQuantity(Math.max(1, quantity - 1))}>-</button>
           <input value={quantity} readOnly className="input-wrap" style={{ textAlign: "center" }} />
-          <button className="button+" onClick={() => setQuantity(quantity + 1)}>+</button>
+          <button className="buttoncart" onClick={() => setQuantity(quantity + 1)}>+</button>
         </div> 
         <button className="button-wrap" onClick={handleAddToCart}>
           Add to Cart
