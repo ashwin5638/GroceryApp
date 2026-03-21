@@ -17,7 +17,7 @@ const Cart1 = ({ cart, setCart }) => {
 
 useEffect(() => {
   const loadCartFromDB = async () => {
-    const userId = getUserId();
+    const userId = localStorage.getItem("userId");
     console.log("Loading cart for user:", userId);
     
     
@@ -40,7 +40,7 @@ useEffect(() => {
 
   
   loadCartFromDB();
-}, []); 
+}, [cart, setCart]); 
 
 
   const handleRemove = async (id) => {

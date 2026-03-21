@@ -22,9 +22,9 @@ const Footer = () => {
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/Product">Products</a></li>
-            <li><a href="#">My Orders</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="/orders">My Orders</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
 
