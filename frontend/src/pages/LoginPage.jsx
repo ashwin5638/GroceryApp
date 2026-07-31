@@ -60,6 +60,7 @@ const LoginPage = () => {
         <Input
           type="email"
           name="email"
+          autoComplete="email"
           placeholder="Enter your email"
           value={values.email}
           onChange={handleChange}
@@ -70,6 +71,7 @@ const LoginPage = () => {
         <Input
           type="password"
           name="password"
+          autoComplete="current-password"
           placeholder="Enter your password"
           value={values.password}
           onChange={handleChange}

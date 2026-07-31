@@ -8,7 +8,11 @@ const app = express();
 
 
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://localhost:5173'],
+  origin: [
+    'http://localhost:3000',
+    'http://localhost:5173',
+    'https://grocery-app-xi-silk.vercel.app',
+  ],
   credentials: true,
 }));
 app.use(express.json());
@@ -26,7 +30,7 @@ app.use('/api/products', productRoutes)
 app.use('/api/cart', cartRoutes)
 
 app.get('/', (req, res) =>{
-  console.log('API running...')
+  res.send('API running...')
 })
 
 const PORT = process.env.PORT
