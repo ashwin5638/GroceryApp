@@ -13,13 +13,13 @@ A full-stack online grocery ordering application built with a React frontend and
 - React 19
 - Vite 6
 - Tailwind CSS v4
-- React Router 7
+- React Router 
 - Axios
 - react-icons
 
 ### Backend
 - Node.js
-- Express 5
+- Express 
 - MongoDB (Atlas)
 - Mongoose
 - JSON Web Tokens (JWT) + bcrypt for authentication
