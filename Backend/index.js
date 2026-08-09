@@ -23,11 +23,12 @@ connectDB()
 const authRoutes = require('./routes/authroutes')
 const productRoutes = require('./routes/productRoutes')
 const cartRoutes = require('./routes/cartRoutes')
-
+const aiRoutes = require('./routes/aiRoutes')
 
 app.use('/api/auth', authRoutes)
 app.use('/api/products', productRoutes)
 app.use('/api/cart', cartRoutes)
+app.use('/api/ai', aiRoutes)
 
 app.get('/', (req, res) =>{
   res.send('API running...')

@@ -56,28 +56,43 @@ export const CartProvider = ({ children }) => {
     }
   }, [cart])
 
-  const addItem = useCallback((product, quantity = 1) => {
-    setCart((prev) => {
-      const existing = prev.find((item) => item.id === product.id)
-      if (existing) {
-        return prev.map((item) =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + quantity }
-            : item,
-        )
-      }
-      return [...prev, { ...product, quantity }]
-    })
-  }, [])
+  const addItem = useCallback(
+    (product, quantity = 1) => {
+      const next = (() => {
+        const existing = cart.find((item) => item.id === product.id)
+        if (existing) {
+          return cart.map((item) =>
+            item.id === product.id
+              ? { ...item, quantity: item.quantity + quantity }
+              : item,
+          )
+        }
+        return [...cart, { ...product, quantity }]
+      })()
+      setCart(next)
+      if (isAuthenticated) saveToDB(next)
+    },
+    [cart, isAuthenticated, saveToDB],
+  )
 
-  const removeItem = useCallback((id) => {
-    setCart((prev) => prev.filter((item) => item.id !== id))
-  }, [])
+  const removeItem = useCallback(
+    (id) => {
+      const next = cart.filter((item) => item.id !== id)
+      setCart(next)
+      if (isAuthenticated) saveToDB(next)
+    },
+    [cart, isAuthenticated, saveToDB],
+  )
 
-  const updateQuantity = useCallback((id, quantity) => {
-    if (quantity < 1) return
-    setCart((prev) => prev.map((item) => (item.id === id ? { ...item, quantity } : item)))
-  }, [])
+  const updateQuantity = useCallback(
+    (id, quantity) => {
+      if (quantity < 1) return
+      const next = cart.map((item) => (item.id === id ? { ...item, quantity } : item))
+      setCart(next)
+      if (isAuthenticated) saveToDB(next)
+    },
+    [cart, isAuthenticated, saveToDB],
+  )
 
   const clearAll = useCallback(async () => {
     if (isAuthenticated) {

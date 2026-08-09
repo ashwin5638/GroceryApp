@@ -52,14 +52,14 @@ const Footer = () => {
         <div>
           <h3 className="font-bold mb-4">Contact Us</h3>
           <ul className="list-none p-0">
-            <li className="text-gray-400 text-sm mb-2">📍 123 Farming Road, Fresh Valley, CA 94103</li>
+            <li className="text-gray-400 text-sm mb-2">📍 123 Farming Road, Mancherial</li>
             <li className="text-gray-400 text-sm mb-2">📞 +1 (555) 123-4567</li>
             <li className="text-gray-400 text-sm mb-2">📧 contact@freshbulk.com</li>
           </ul>
         </div>
       </div>
       <div className="text-center text-sm text-gray-500 pt-5 mt-10 border-t border-gray-700">
-        © 2023 FreshBulk. All rights reserved.
+        © 2026 FreshBulk. All rights reserved.
       </div>
     </footer>
   )
