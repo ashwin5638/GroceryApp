@@ -16,6 +16,7 @@ A full-stack online grocery ordering application built with a React frontend and
 - React Router 
 - Axios
 - react-icons
+- OpenAI SDK (via OpenRouter)
 
 ### Backend
 - Node.js
@@ -38,11 +39,13 @@ A full-stack online grocery ordering application built with a React frontend and
 - User registration and login (JWT-based)
 - Protected routes
 - Fully responsive UI
+- AI Grocery Assistant: floating chat widget that recommends products from the live inventory
 
 ### Backend
 - RESTful APIs for authentication, products, and cart
 - JWT middleware for protected endpoints
 - MongoDB data persistence via Mongoose
+- AI chat endpoint that generates product recommendations using OpenRouter (OpenAI models)
 
 ---
 
@@ -53,9 +56,9 @@ GroceryApp-v2/
 ├── frontend/
 │   ├── public/
 │   └── src/
-│       ├── api/          # Axios client + API calls (auth, cart)
+│       ├── api/          # Axios client + API calls (auth, cart, ai)
 │       ├── assets/       # Images
-│       ├── components/   # Reusable UI components
+│       ├── components/   # Reusable UI components (incl. ui/AI chat widget)
 │       ├── context/      # Auth & Cart contexts
 │       ├── hooks/        # useAuth, useCart, useForm, useProducts
 │       ├── layouts/      # AuthLayout, MainLayout, Navbar, Footer
@@ -67,10 +70,12 @@ GroceryApp-v2/
 │       └── index.css
 └── backend/
     ├── config/           # DB connection
-    ├── controllers/      # Auth, product, cart controllers
+    ├── controllers/      # Auth, product, cart, AI controllers
     ├── middleware/       # JWT auth
     ├── model/            # Mongoose models (user, product, cart)
-    ├── routes/           # Auth, product, cart routes
+    ├── routes/           # Auth, product, cart, AI routes
+    ├── services/         # AI response generation (OpenRouter)
+    ├── seed.js           # Seed script for products
     ├── index.js          # Express app entry point
     └── package.json
 ```
@@ -97,6 +102,7 @@ Create a `.env` file in `backend/`:
 PORT=5000
 JWT_SECRET=your_jwt_secret
 ATLAS_URI=mongodb+srv://<user>:<password>@<cluster>.mongodb.net/Grocery?retryWrites=true&w=majority
+OPENROUTER_API_KEY=your_openrouter_api_key
 ```
 
 Run the server:
@@ -175,6 +181,11 @@ Base URL: `http://localhost:5000` (or the deployed URL)
 | POST   | `/api/cart`   | Save cart items     |
 | DELETE | `/api/cart`   | Clear cart          |
 
+### AI Assistant
+| Method | Endpoint    | Description                                    |
+| ------ | ----------- | ---------------------------------------------- |
+| POST   | `/api/ai/chat` | Send a message; returns product recommendations |
+
 ---
 
 ## Deployment
@@ -188,7 +199,7 @@ Base URL: `http://localhost:5000` (or the deployed URL)
 ### Backend (Render)
 1. Create a new Web Service connected to the repo.
 2. Set the root directory to `backend`.
-3. Add the environment variables `PORT`, `JWT_SECRET`, and `ATLAS_URI`.
+3. Add the environment variables `PORT`, `JWT_SECRET`, `ATLAS_URI`, and `OPENROUTER_API_KEY`.
 4. Start command: `npm start`.
 
 ### CORS
