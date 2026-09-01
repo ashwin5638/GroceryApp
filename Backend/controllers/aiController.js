@@ -29,11 +29,14 @@ const chatWithAi = async (req, res) => {
     })
 
     } catch(error){
-        console.log('AI Error', error)
+        console.error('AI Error', error?.response?.data || error?.message || error)
 
-        res.status(500).json({
-            sucess : false,
-            message : "Ai assisstant failed"
+        const detail = error?.response?.data?.error?.message || error?.message || "Ai assisstant failed"
+        const status = error?.response?.status || 500
+
+        res.status(status).json({
+            success : false,
+            message : detail
         })
     }
 }

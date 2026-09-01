@@ -2,7 +2,11 @@ const openAI = require('openai')
 
 const openai = new openAI({
     apiKey : process.env.OPENROUTER_API_KEY,
-    baseURL : "https://openrouter.ai/api/v1"
+    baseURL : "https://openrouter.ai/api/v1",
+    defaultHeaders : {
+        "HTTP-Referer" : process.env.SITE_URL || "http://localhost:3000",
+        "X-Title" : "GroceryApp"
+    }
 })
 
 const generateAIresponse = async (message, products) => {
@@ -15,7 +19,7 @@ const generateAIresponse = async (message, products) => {
     }))
 
     const completion = await openai.chat.completions.create({
-        model: "openai/gpt-oss-20b:free",
+        model: "minimax/minimax-m3:free",
 
         messages : [
             {
