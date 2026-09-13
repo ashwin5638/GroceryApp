@@ -19,7 +19,7 @@ const generateAIresponse = async (message, products) => {
     }))
 
     const completion = await openai.chat.completions.create({
-        model: "minimax/minimax-m3:free",
+        model: "nvidia/nemotron-3-super-120b-a12b:free",
 
         messages : [
             {
