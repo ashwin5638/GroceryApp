@@ -49,7 +49,15 @@ const generateAIresponse = async (message, products) => {
         ]
     })
 
-    return completion.choices[0].message.content
+    const choice = completion?.choices?.[0]?.message?.content
+
+    if (!choice) {
+        const err = new Error(completion?.error?.message || "AI assistant returned no response, please try again")
+        err.status = completion?.error?.code === 429 ? 429 : 502
+        throw err
+    }
+
+    return choice
 }
 
 module.exports = generateAIresponse;

@@ -32,7 +32,7 @@ const chatWithAi = async (req, res) => {
         console.error('AI Error', error?.response?.data || error?.message || error)
 
         const detail = error?.response?.data?.error?.message || error?.message || "Ai assisstant failed"
-        const status = error?.response?.status || 500
+        const status = error?.response?.status || error?.status || 500
 
         res.status(status).json({
             success : false,
