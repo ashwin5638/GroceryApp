@@ -1,0 +1,232 @@
+[
+  {
+    "name": "Cabbage",
+    "description": "Fresh organic cabbage grown locally. Perfect for salads and cooking.",
+    "price": 30,
+    "category": "Vegetables",
+    "stock": 50,
+    "image_url": "/products/cabbage.webp"
+  },
+  {
+    "name": "Capsicum",
+    "description": "One Fresh organic capsicum grown locally. Perfect for cooking.",
+    "price": 50,
+    "category": "Vegetables",
+    "stock": 50,
+    "image_url": "/products/capsicum.webp"
+  },
+  {
+    "name": "Garlic",
+    "description": "Fresh organic garlic grown locally. Perfect for  cooking.",
+    "price": 80,
+    "category": "Vegetables",
+    "stock": 50,
+    "image_url": "/products/garlic.webp"
+  },
+  {
+    "name": "Beetroot",
+    "description": "Fresh organic Beetroot grown locally. Perfect for salads and cooking.",
+    "price": 50,
+    "category": "Vegetables",
+    "stock": 50,
+    "image_url": "/products/beetroot.webp"
+  },
+  {
+    "name": "Tomatoes",
+    "description": "One Fresh organic Tomatos grown locally. Perfect for salads and cooking.",
+    "price": 30,
+    "category": "Vegetables",
+    "stock": 50,
+    "image_url": "/products/tomatoes.webp"
+  },
+  {
+    "name": "Celeriac",
+    "description": "One Bunch",
+    "price": 40,
+    "category": "Vegetables",
+    "stock": 50,
+    "image_url": "/products/celeriac.webp"
+  },
+  {
+    "name": "Potato",
+    "description": "Fresh farm potatoes. Perfect for cooking.",
+    "price": 25,
+    "category": "Vegetables",
+    "stock": 50,
+    "image_url": "/products/potato.webp"
+  },
+  {
+    "name": "Carrot",
+    "description": "Fresh crunchy carrots grown locally. Perfect for salads and cooking.",
+    "price": 40,
+    "category": "Vegetables",
+    "stock": 50,
+    "image_url": "/products/carrot.webp"
+  },
+  {
+    "name": "Red Onion",
+    "description": "Fresh red onions grown locally. Perfect for cooking.",
+    "price": 45,
+    "category": "Vegetables",
+    "stock": 50,
+    "image_url": "/products/red-onion.webp"
+  },
+  {
+    "name": "Broccoli",
+    "description": "Fresh organic broccoli head. Perfect for salads and cooking.",
+    "price": 65,
+    "category": "Vegetables",
+    "stock": 50,
+    "image_url": "/products/broccoli.webp"
+  },
+  {
+    "name": "Cauliflower",
+    "description": "Fresh organic cauliflower. Perfect for curries and cooking.",
+    "price": 55,
+    "category": "Vegetables",
+    "stock": 50,
+    "image_url": "/products/cauliflower.webp"
+  },
+  {
+    "name": "Spinach",
+    "description": "Fresh organic spinach leaves. Perfect for salads and cooking.",
+    "price": 30,
+    "category": "Vegetables",
+    "stock": 50,
+    "image_url": "/products/spinach.webp"
+  },
+  {
+    "name": "Cucumber",
+    "description": "Fresh organic cucumber grown locally. Perfect for salads.",
+    "price": 35,
+    "category": "Vegetables",
+    "stock": 50,
+    "image_url": "/products/cucumber.webp"
+  },
+  {
+    "name": "Apple",
+    "price": 60,
+    "category": "Fruits",
+    "stock": 50,
+    "image_url": "/products/apple.webp"
+  },
+  {
+    "name": "Banana",
+    "price": 50,
+    "category": "Fruits",
+    "stock": 50,
+    "image_url": "/products/banana.webp"
+  },
+  {
+    "name": "Grapes",
+    "price": 45,
+    "category": "Fruits",
+    "stock": 50,
+    "image_url": "/products/grapes.webp"
+  },
+  {
+    "name": "Pineapple",
+    "price": 100,
+    "category": "Fruits",
+    "stock": 50,
+    "image_url": "/products/pineapple.webp"
+  },
+  {
+    "name": "Mango",
+    "price": 80,
+    "category": "Fruits",
+    "stock": 50,
+    "image_url": "/products/mango.webp"
+  },
+  {
+    "name": "Watermelon",
+    "price": 25,
+    "category": "Fruits",
+    "stock": 50,
+    "image_url": "/products/watermelon.webp"
+  },
+  {
+    "name": "Strawberry",
+    "price": 90,
+    "category": "Fruits",
+    "stock": 50,
+    "image_url": "/products/strawberry.webp"
+  },
+  {
+    "name": "Pomegranate",
+    "price": 70,
+    "category": "Fruits",
+    "stock": 50,
+    "image_url": "/products/pomegranate.webp"
+  },
+  {
+    "name": "Papaya",
+    "price": 55,
+    "category": "Fruits",
+    "stock": 50,
+    "image_url": "/products/papaya.webp"
+  },
+  {
+    "name": "Kiwi",
+    "price": 85,
+    "category": "Fruits",
+    "stock": 50,
+    "image_url": "/products/kiwi.webp"
+  },
+  {
+    "name": "Passion Fruit",
+    "price": 65,
+    "category": "Fruits",
+    "stock": 50,
+    "image_url": "/products/passion-fruit.webp"
+  },
+  {
+    "name": "Fresh Basil",
+    "price": 100,
+    "category": "Herbs",
+    "stock": 50,
+    "image_url": "/products/fresh-basil.webp"
+  },
+  {
+    "name": "Mint",
+    "price": 40,
+    "category": "Herbs",
+    "stock": 50,
+    "image_url": "/products/mint.webp"
+  },
+  {
+    "name": "Coriander",
+    "price": 30,
+    "category": "Herbs",
+    "stock": 50,
+    "image_url": "/products/coriander.webp"
+  },
+  {
+    "name": "Rosemary",
+    "price": 60,
+    "category": "Herbs",
+    "stock": 50,
+    "image_url": "/products/rosemary.webp"
+  },
+  {
+    "name": "Thyme",
+    "price": 50,
+    "category": "Herbs",
+    "stock": 50,
+    "image_url": "/products/thyme.webp"
+  },
+  {
+    "name": "Parsley",
+    "price": 35,
+    "category": "Herbs",
+    "stock": 50,
+    "image_url": "/products/parsley.webp"
+  },
+  {
+    "name": "Oregano",
+    "price": 55,
+    "category": "Herbs",
+    "stock": 50,
+    "image_url": "/products/oregano.webp"
+  }
+]
