@@ -31,8 +31,8 @@ const RegisterPage = () => {
     event.preventDefault()
     if (!validateAll()) return
 
-    // The API signs the new user in straight away, so no second login needed.
-    if (await register(values)) navigate('/', { replace: true })
+    // After creating the account, send the user to the sign-in page.
+    if (await register(values)) navigate('/login', { replace: true })
   }
 
   return (

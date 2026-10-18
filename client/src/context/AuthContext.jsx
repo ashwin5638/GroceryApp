@@ -38,7 +38,19 @@ export const AuthProvider = ({ children }) => {
 
   const login = useCallback((email, password) => submit(() => loginApi(email, password)), [submit])
 
-  const register = useCallback((userData) => submit(() => registerApi(userData)), [submit])
+  const register = useCallback(async (userData) => {
+    setLoading(true)
+    setError('')
+    try {
+      await registerApi(userData)
+      return true
+    } catch (err) {
+      setError(err.response?.data?.message || 'Something went wrong. Please try again.')
+      return false
+    } finally {
+      setLoading(false)
+    }
+  }, [])
 
   const logout = useCallback(() => {
     localStorage.removeItem(STORAGE_KEYS.TOKEN)
