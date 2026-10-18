@@ -8,9 +8,9 @@ import ProductCard from '../components/ui/ProductCard'
 import { useProducts } from '../hooks/useProducts'
 import { EASE } from '../lib/motion'
 import heroImg from '../assets/img1.webp'
-import vegetablesImg from '../assets/img2.webp'
-import fruitsImg from '../assets/img3.webp'
-import herbsImg from '../assets/img4.webp'
+import vegetablesImg from '../assets/img2.png'
+import fruitsImg from '../assets/img3.png'
+import herbsImg from '../assets/img4.png'
 
 const categories = [
   { name: 'Vegetables', emoji: '🥬', image: vegetablesImg, link: '/product' },
