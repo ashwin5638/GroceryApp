@@ -15,7 +15,9 @@ const chatWithAI = async (req, res) => {
 
     res.json({ success: true, response })
   } catch (err) {
-    res.status(500).json({ success: false, message: err.message || 'Server error' })
+    res
+      .status(err.statusCode || 500)
+      .json({ success: false, message: err.message || 'Server error' })
   }
 }
 

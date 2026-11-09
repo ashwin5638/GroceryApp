@@ -8,7 +8,7 @@ const openai = new OpenAI({
   baseURL: 'https://openrouter.ai/api/v1',
 })
 
-const AI_MODEL = 'nvidia/nemotron-3-super-120b-a12b:free'
+const AI_MODEL = 'nvidia/nemotron-3-ultra-550b-a55b:free'
 
 const SYSTEM_PROMPT = `You are a grocery shopping assistant for an online produce store.
 You help the user choose products from the inventory provided below.
